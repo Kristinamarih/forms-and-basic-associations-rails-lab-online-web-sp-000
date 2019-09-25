@@ -19,7 +19,7 @@ class Song < ActiveRecord::Base
     self.artist ? self.artist.name : nil
   end
 
-  def note_contents=(notes)
+  def note_contents=(note)
     notes.each do |note|
       note = self.notes.build(content: content) unless content.empty?
     end
